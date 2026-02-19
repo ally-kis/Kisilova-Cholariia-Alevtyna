@@ -11,48 +11,125 @@
 		<header class="game-header">
 			<div class="status">
 				<div class="timer" aria-live="polite">00:00</div>
-				<div class="flags">🚩 <span class="flags-count">0</span></div>
+				<div class="flags"><span class="flag-icon" aria-hidden="true"></span> <span class="flags-count">6🚩</span></div>
 			</div>
 			<button class="btn-start" type="button">Нова гра</button>
 		</header>
 
-		<section class="board" role="grid" style="--cols:6; --rows:6">
-			<!-- Sample grid cells (6x6) - real game can generate these dynamically -->
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell open" role="gridcell" aria-label="open">1</div>
-			<div class="cell flagged" role="gridcell" aria-label="flagged"></div>
-			<div class="cell mine" role="gridcell" aria-label="mine"></div>
-			<div class="cell mine clicked" role="gridcell" aria-label="exploded mine"></div>
-
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
-			<div class="cell closed" role="gridcell" aria-label="closed"></div>
+		<section class="board" role="grid" aria-label="Minesweeper board" style="--cols:10">
+		  <!-- Static 10x10 demo board (template only, no JS) -->
+		  <!-- Row 1 -->
+		  <div class="cell closed"></div>
+		  <div class="cell flagged"></div>
+		  <div class="cell open" data-number="1">1</div>
+		  <div class="cell closed"></div>
+		  <div class="cell flagged"></div>
+		  <div class="cell mine"></div>
+		  <div class="cell open" data-number="3">3</div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+ 		  <!-- Row 2 -->
+ 		  <div class="cell closed"></div>
+ 		  <div class="cell open" data-number="2">2</div>
+ 		  <div class="cell open" data-number="3">3</div>
+ 		  <div class="cell closed"></div>
+ 		  <div class="cell mine"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell open" data-number="1">1</div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <!-- Row 3 -->
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell open" data-number="4">4</div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell open" data-number="1">1</div>
+		  <div class="cell closed"></div>
+		  <!-- Row 4 -->
+		  <div class="cell flagged"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell open" data-number="2">2</div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell open" data-number="1">1</div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <!-- Row 5 -->
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell flagged"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell open" data-number="2">2</div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <!-- Row 6 -->
+		  <div class="cell closed"></div>
+		  <div class="cell open" data-number="3">3</div>
+		  <div class="cell closed"></div>
+		  <div class="cell flagged"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell open" data-number="1">1</div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <!-- Row 7 -->
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell open" data-number="2">2</div>
+		  <div class="cell closed"></div>
+		  <div class="cell mine"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell flagged"></div>
+		  <div class="cell closed"></div>
+		  <!-- Row 8 -->
+		  <div class="cell open" data-number="1">1</div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell open" data-number="3">3</div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <!-- Row 9 -->
+		  <div class="cell mine"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell open" data-number="2">2</div>
+		  <div class="cell closed"></div>
+		  <!-- Row 10 -->
+		  <div class="cell mine"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
+		  <div class="cell closed"></div>
 		</section>
+
 	</main>
 </body>
 </html>
