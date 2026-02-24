@@ -1,4 +1,4 @@
-# Kisilova-Cholariia-Alevtyna
+# Кісільова-Чоларія Алевтина 
 * Лабораторна робота №1 з HTML та CSS <br>
 * Minesweeper UI <br>
 * Опис: <br>
