@@ -31,7 +31,7 @@ body{
   color:var(--muted-ink);
 }
 
-/* карточка игры */
+
 .game{
   width: min(96vw, 980px);
   background: rgba(255,255,255,0.9);
@@ -42,7 +42,7 @@ body{
   border:1px solid rgba(255,255,255,0.6);
 }
 
-/* header */
+
 .game-header{
   display:flex;
   justify-content:space-between;
@@ -66,7 +66,7 @@ body{
 
 .flags{ display:inline-flex; align-items:center; gap:8px; padding:8px 10px }
 
-/* кнопка */
+
 .btn-start{
   padding:10px 18px;
   font-weight:700;
@@ -87,7 +87,7 @@ body{
   box-shadow: 0 16px 36px rgba(16,185,129,0.3);
 }
 
-/* поле */
+
 .board{
   --cols: 10;
   display:grid;
@@ -129,7 +129,6 @@ body{
   transform: translateY(-3px);
 }
 
-/* открытая — светлая голубая */
 .cell.open{
   background: linear-gradient(180deg,#eff6ff,#dbeafe);
   color:#1e3a8a;
@@ -191,5 +190,6 @@ body{
   .timer, .flags{ padding:6px 8px }
   .btn-start{ padding:8px 10px }
 }
+
 
 
