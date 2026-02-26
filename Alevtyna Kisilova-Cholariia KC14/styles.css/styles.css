@@ -15,7 +15,7 @@ body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
 
-  /* 🌸 нежный розово-зелёный градиент */
+
   background: linear-gradient(
     135deg,
     #ffe6f1 0%,
@@ -101,7 +101,7 @@ body{
   margin:0 auto;
 }
 
-/* базовая клетка */
+
 .cell{
   aspect-ratio:1/1;
   min-width:var(--cell-min);
@@ -117,7 +117,7 @@ body{
   border:1px solid rgba(0,0,0,0.05);
 }
 
-/* закрытая — нежно-мятная */
+
 .cell.closed{
   background: linear-gradient(180deg,#ffffffcc,#f8fafcaa);
   color: transparent;
@@ -135,7 +135,7 @@ body{
   color:#1e3a8a;
 }
 
-/* 🚩 флажок — персиковый, чтобы отличался */
+
 .cell.flagged{
   position:relative;
   background: linear-gradient(180deg,#ffe4e6,#fecdd3);
@@ -152,7 +152,7 @@ body{
   filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
 }
 
-/* 💣 бомбы — фиолетовые, НЕ как фон */
+
 .cell.mine{
   background: radial-gradient(circle at 40% 40%, #c4b5fd 0%, #8b5cf6 70%);
   color:#fff;
@@ -178,16 +178,17 @@ body{
   font-size:20px;
 }
 
-/* цифры */
+
 .cell.open[data-number='1']{ color:#2563eb }
 .cell.open[data-number='2']{ color:#059669 }
 .cell.open[data-number='3']{ color:#dc2626 }
 .cell.open[data-number='4']{ color:#7c3aed }
 
-/* адаптив */
+
 @media (max-width:520px){
   :root{ --cell-min:28px; --cell-max:40px }
   .game{ padding:12px }
   .timer, .flags{ padding:6px 8px }
   .btn-start{ padding:8px 10px }
 }
+
